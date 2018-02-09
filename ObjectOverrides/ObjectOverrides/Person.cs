@@ -12,6 +12,7 @@ namespace ObjectOverrides
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public int Age { get; set; }
+        public string SSN { get; set; }
 
         public Person(string fName,string lName, int personAge)
         {
@@ -25,7 +26,7 @@ namespace ObjectOverrides
         public override string ToString()
         {
             string myState;
-            myState = string.Format("[First Name: {0}; Last Name{1}; Age: {2}]", FirstName, LastName, Age);
+            myState = string.Format("[First Name: {0}; Last Name: {1}; Age: {2}, SSN: {3}]", FirstName, LastName, Age, SSN);
             return myState;
         }
         public override bool Equals(object obj)
@@ -48,5 +49,11 @@ namespace ObjectOverrides
             return false;
             */
         }
+        //Вернуть хэш-код на основе уникальных строковых данных
+        public override int GetHashCode()
+        {
+            return this.ToString().GetHashCode();
+        }
+
     }
 }

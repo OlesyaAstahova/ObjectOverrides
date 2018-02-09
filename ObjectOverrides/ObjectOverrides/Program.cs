@@ -12,6 +12,18 @@ namespace ObjectOverrides
         {
             Console.WriteLine("***** Fun with System.Object *****\n");
             Person p1 = new Person();
+            p1.FirstName = "Frank";
+            p1.LastName = "Hank";
+            p1.Age = 20;
+            p1.SSN = "123";
+
+            Person p = new Person();
+            p.FirstName = "Frank";
+            p.LastName = "Hank";
+            p.Age = 20;
+            p.SSN = "123";
+
+          
 
             //Исп. унаследованные члены System.Object
             Console.WriteLine("ToString: {0}",p1.ToString());
@@ -27,6 +39,30 @@ namespace ObjectOverrides
             {
                 Console.WriteLine("Same instance!");
             }
+            Console.WriteLine("Два разных объекта с одинаковыми значениями");
+
+
+
+            if (p1 == p)
+            {
+                Console.WriteLine("true");
+            }
+            else
+            {
+                Console.WriteLine("false");
+            }
+
+            Console.WriteLine("Два объекта ссылаются на 1 ссылку");
+            if (p1 == p2)
+            {
+                Console.WriteLine("true");
+            }
+            else
+            {
+                Console.WriteLine("false");
+            }
+
+
             Console.ReadLine();
         }
     }
