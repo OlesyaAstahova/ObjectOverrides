@@ -39,10 +39,11 @@ namespace ObjectOverrides
             {
                 Console.WriteLine("Same instance!");
             }
-            Console.WriteLine("Два разных объекта с одинаковыми значениями");
 
 
 
+            Console.WriteLine("Два разных объекта p1 и р с одинаковыми значениями");
+            //Console.WriteLine("Два разных объекта p1 и р с одинаковыми значениями", object.Equals(p1,p));
             if (p1 == p)
             {
                 Console.WriteLine("true");
@@ -53,6 +54,7 @@ namespace ObjectOverrides
             }
 
             Console.WriteLine("Два объекта ссылаются на 1 ссылку");
+            //Console.WriteLine("", object.ReferenceEquals(p1,p2));
             if (p1 == p2)
             {
                 Console.WriteLine("true");
